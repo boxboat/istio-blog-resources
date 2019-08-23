@@ -1,0 +1,29 @@
+version: '3'
+services:
+  api-red:
+    image: jcantosz/demo-colors
+    environment:
+      COLOR: red
+    build: ./colors
+    ports: 
+    - "8080:3000"
+  api-blue:
+    image: jcantosz/demo-colors
+    environment:
+      COLOR: blue
+    build: ./colors
+    ports: 
+    - "8081:3000"
+
+  logger-backend:
+    image: jcantosz/demo-logger-backend
+    build: ./logger-backend
+    ports:
+    - "9081:3000"
+  logger-frontend:
+    image: jcantosz/demo-logger-frontend
+    build: ./logger-frontend
+    ports: 
+    - "9080:3000"
+    depends_on:
+    - logger-backend

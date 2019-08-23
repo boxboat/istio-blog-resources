@@ -1,0 +1,36 @@
+body, html, #container{
+  // fallbacks
+  width: 100%; 
+  height: 100%; 
+
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px
+}
+
+#colors {
+  width: 100%;
+  height: 50%;
+  outline: thin solid black;
+}
+
+#colors * {
+  height: 100%;
+  display: inline-block;
+  outline: thin solid black;
+}
